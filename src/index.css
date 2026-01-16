@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: aqua;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.container {
+  width: 300px;
+  margin: 100px auto;
+}
