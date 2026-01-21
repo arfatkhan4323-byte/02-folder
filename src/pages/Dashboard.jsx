@@ -1,26 +1,30 @@
-import { useState } from "react";
 import Sidebar from "../components/Sidebar";
-import Warehouse from "./Warehouse";
+import { useAuth } from "../context/AuthContext";
 
-function Dashboard() {
-  const [page, setPage] = useState("dashboard"); 
+
+
+const Dashboard = () => {
+  const { user } = useAuth(); 
 
   return (
-    <div style={{ display: "flex" }}>
+    <div className="flex">
    
-      <Sidebar setPage={setPage} />
+      <Sidebar />
 
-     
-      <div style={{ padding: "20px", width: "100%" }}>
-        {page === "dashboard" && (
-          <>
-            <h2>Dashboard</h2>
-            <p>Welcome to dashboard</p>
-          </>
-        )}
+     <main className="flex-1 p-10 bg-gray-100 min-h-screen">
+      <h1 className="text-3xl font-bold mb-4">
+        Welcome {user.email}
+      </h1>
 
-        {page === "warehouse" && <Warehouse />}
+      <div className="grid grid-cols-3 gap-6">
+        <div className="bg-white p-6 rounded shadow">Warehouse: 4</div>
+        <div className="bg-white p-6 rounded shadow">Product: 120</div>
+        <div className="bg-white p-6 rounded shadow">user: 3</div>
+        <div className="bg-white p-6 rounded shadow">Warehouse: 5</div>
+        <div className="bg-white p-6 rounded shadow">Product: 121</div>
+        <div className="bg-white p-6 rounded shadow">user: 4</div>
       </div>
+     </main>
     </div>
   );
 }
