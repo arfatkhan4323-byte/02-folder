@@ -20,7 +20,7 @@ const Login = () => {
 
   
 return (
-    <div className="min-h-screen flex items-center justify-center bg-red-600">
+    <div className="min-h-screen flex items-center justify-center bg-gray-600">
        
 
         <form onSubmit={handleSubmit} 
@@ -39,7 +39,7 @@ return (
 
             <input
             type="password"
-            placeholder="Password"
+            placeholder=" 🔑 Password"
             className="w-full mb-4 p-3 border-rounded"
             onChange={(e) => setPassword (e.target.value)}/>
 

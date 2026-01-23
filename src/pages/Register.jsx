@@ -15,7 +15,7 @@ const Register = () => {
     className="w-full mb-4 p-3 border rounded"/>
 
     <input type="password" 
-    placeholder="Password"
+    placeholder=" 🔑 Password"
     className="w-full mb-4 p-3 border rounded"/>
 
    <button className="w-full bg-blue-600 text-white py-3 rounded">Register</button>
